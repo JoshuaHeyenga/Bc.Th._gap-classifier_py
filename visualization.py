@@ -22,12 +22,6 @@ def plot_results_with_decision_boundary(
     # Decision boundary
     plt.contour(xx, yy, Z, levels=[0.5], colors="grey", linewidths=1.5)
 
-    # Uncertainty region
-    probas = classifier.predict_proba(np.c_[xx.ravel(), yy.ravel()])[:, 1]
-    uncertain_region_mask = (probas > 0.05) & (probas < 0.95)
-    uncertain_region = uncertain_region_mask.reshape(xx.shape)
-    plt.contourf(xx, yy, uncertain_region, levels=[0, 1], colors="purple", alpha=0.2)
-
     # Plot certain points
     plt.scatter(
         X[~uncertain_mask, 0],
@@ -43,8 +37,8 @@ def plot_results_with_decision_boundary(
     plt.scatter(
         X[uncertain_mask, 0],
         X[uncertain_mask, 1],
-        c="purple",
-        marker="s",
+        c="grey",
+        marker="D",
         alpha=0.7,
         label="Uncertain Points",
     )
