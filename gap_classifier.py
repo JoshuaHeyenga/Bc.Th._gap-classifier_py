@@ -15,7 +15,7 @@ def compute_uncertainty_regions(classifier, X, Y, threshold=UNCERTAINTY_THRESHOL
     high_certainty_mask = (probabilities <= 0.01) | (probabilities >= 0.99)
 
     Y_extended = np.copy(Y)
-    Y_extended[uncertain_mask] = 2  # Assign a new class for uncertain points
+    Y_extended[uncertain_mask] = 2
     return uncertain_mask, high_certainty_mask, Y_extended
 
 

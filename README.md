@@ -19,23 +19,13 @@ The project involves:
 4. **Apply to Multiple Datasets**: Generalize the approach beyond toy datasets.
 
 ## Installation
-```
-
-## Usage
-Run the `gap_classifier.py` script to:
-- Train an **SVM classifier** on two labeled classes.
-- Identify and assign uncertain points to the **Gap class**.
-- Visualize the decision boundary and the impact of the Gap class.
-
-```bash
-python gap_classifier.py
-```
+**N/A**
 
 ## Features
-- **N/A**
+**N/A**
 
 ## Next Steps
-- **N/A**
+**N/A**
 
 ## Contributing
 Feel free to contribute by improving the **data generation process** or testing the approach on new datasets.
